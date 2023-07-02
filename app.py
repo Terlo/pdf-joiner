@@ -9,7 +9,9 @@ from reportlab.platypus import Paragraph, SimpleDocTemplate
 app = Flask(__name__)
 
 def generate_pdf(button_pressed):
-
+   
+    min_length = 0;max_length=0;
+    print(button_pressed)
     if button_pressed == "Long":
         min_length=17;max_length=25
     if button_pressed == "Medium":
