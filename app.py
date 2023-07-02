@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.platypus import Paragraph, SimpleDocTemplate
-import os
+
 
 app = Flask(__name__)
 
