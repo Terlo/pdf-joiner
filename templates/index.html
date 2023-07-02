@@ -1,38 +1,42 @@
 <!DOCTYPE html>
-<html>
- 
+<html lang="en">
 <head>
-    <title>FlaskTest</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teach Me Something New</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
 </head>
-<link rel="stylesheet" type="text/css" href="static/index.css" />
-<link
-  rel="shortcut icon"
-  href="{{ url_for('static', filename='favicon.ico') }}"
-/>
 <body>
+  <header>
+    <h1>Teach Me Something New</h1>
+  </header>
+  <main>
+    <button id="generate-btn">Teach Me Something</button>
+    <div id="summary">
+      <h2>Lorem Ipsum</h2>
+      <p>
+        Uncover the beauty of unpredictability in learning. Our web application entices you with a delightful surprise - random PDF summaries drawn from the vast spectrum of Wikipedia's knowledge. Embrace the wonder of chance as you embark on an intellectual adventure.
+      </p>
+      <p>
+        Click the 'Teach me something new' button and watch as our web application generates a fascinating PDF summary, handpicked from Wikipedia's vast collection. Whether you're seeking intellectual stimulation, expanding your knowledge, or simply indulging your curiosity, our platform is here to guide you
+      </p>
+
+     <form action="/generate" method="POST">
+        <input type="submit" value="Short">
+     </form>
+     rtdshgsre
+     <form action="/generate" method="POST">
+         <input type="submit" value="Medium">
+     </form>
+        srtdhtgrsts
+     <form action="/generate" method="POST">
+        <input type="submit" value="Long">
+    </form>
     
-    <div class= "main-outer">
-        <div class = "first-box">
-            <p>Enter a valid github username</p> 
-            <form method="POST">
-                <input name="text">
-                <input type="submit">
-            </form>
-        </div> 
-        <div class = "second-box">
-            
-            
-            
-            <p>Enter a username and the name of a valid github repo associated with said user.</p> 
-            <form method="POST">
-                <input name="username" placeholder="user name">
-                <input name="repository" placeholder="Repository name">
-                <input type="submit" >
-            </form>             
-        </div> 
     </div>
+  </main>
 
-
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
- 
 </html>
