@@ -18,7 +18,10 @@ def generate_pdf(button_pressed):
         min_length=10;max_length=17
     if button_pressed == "Short":
         min_length=6;max_length=10
+    else:
+        min_length = 10;max_length =17
     complete = False
+
     while complete == False:
         # Trying to open a random Wikipedia article
         res = requests.get("https://en.wikipedia.org/wiki/Special:Random")
