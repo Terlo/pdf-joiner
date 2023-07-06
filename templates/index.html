@@ -4,28 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Teach Me Something New</title>
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
 </head>
 <body>
   <header>
-    <h1>Teach Me Something New</h1>
+    <div class="logo">
+      <img src="wikipedia-logo.png" alt="Wikipedia Logo">
+      <h1>Teach Me Something New</h1>
+    </div>
+    <div class="subtitle">
+      <p>Powered by Wikipedia</p>
+    </div>
   </header>
   <main>
-    
-    <div id="summary">
-	    <h2>Try it out🎈</h2>
+    <div class="title">
+      <h2>Learn about: <span id="topic"></span></h2>
+    </div>
+    <div class="summary">
+      <img src="../images/computer-internet-woman-icon.png" alt="hi">
       <p>
-        Uncover the beauty of unpredictability in learning. Our web application entices you with a delightful surprise - random PDF summaries drawn from the vast spectrum of Wikipedia's knowledge. Embrace the wonder of chance as you embark on an intellectual adventure.⛑
+        Uncover the beauty of unpredictability in learning.
+        Our web application entices you with a delightful surprise - random PDF summaries drawn from the vast spectrum of Wikipedia's knowledge. Embrace the wonder of chance as you embark on an intellectual adventure.
       </p>
+      <img src="wikipedia-logo.png" alt="Wikipedia Logo">
       <p>
-        Click the 'Teach me something new' button and watch as our web application generates a fascinating PDF summary, handpicked from Wikipedia's vast collection. Whether you're seeking intellectual stimulation, expanding your knowledge, or simply indulging your curiosity, our platform is here to guide you🎇
+        Click the 'Teach me something new' button, and watch as our web application generates a fascinating PDF summary, handpicked from Wikipedia's vast collection. Whether you're seeking intellectual stimulation, expanding your knowledge, or simply indulging your curiosity, our platform is here to guide you.
       </p>
-
-     <form action="/generate" method="POST">
-        <input type="submit" value="Teach me something!">
-     </form>
-  
+    </div>
+    <div class="counter">
+      <h3>PDFs Generated: <span id="counter">{{ counter }}</span></h3>
+    </div>
+    <div class="button-container">
+      <form action="/generate" method="POST">
+        <button type="submit">Teach me something!</button>
+      </form>
     </div>
   </main>
 
