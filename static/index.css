@@ -12,19 +12,19 @@ header {
   text-align: center;
 }
 
-.logo {
+.subtitle {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.logo img {
+.subtitle img {
   width: 40px;
   height: 40px;
   margin-right: 10px;
 }
 
-.logo h1 {
+.subtitle h1 {
   font-size: 24px;
   margin: 0;
 }

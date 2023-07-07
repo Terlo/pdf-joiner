@@ -13,6 +13,8 @@ import re
 import os
 
 
+
+
 def read_counter():
     counter = 0
     file_path = os.path.join(os.getcwd(), "counter.json")

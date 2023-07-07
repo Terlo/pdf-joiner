@@ -9,12 +9,9 @@
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="wikipedia-logo.png" alt="Wikipedia Logo">
-      <h1>Teach Me Something New</h1>
-    </div>
     <div class="subtitle">
-      <p>Powered by Wikipedia</p>
+      <h1>🍕knowledge Bytes🍕</h1>
+     
     </div>
   </header>
   <main>
@@ -22,25 +19,38 @@
       <h2>Learn about: <span id="topic"></span></h2>
     </div>
     <div class="summary">
-      <img src="../images/computer-internet-woman-icon.png" alt="hi">
-      <p>
-        Uncover the beauty of unpredictability in learning.
-        Our web application entices you with a delightful surprise - random PDF summaries drawn from the vast spectrum of Wikipedia's knowledge. Embrace the wonder of chance as you embark on an intellectual adventure.
-      </p>
-      <img src="wikipedia-logo.png" alt="Wikipedia Logo">
-      <p>
-        Click the 'Teach me something new' button, and watch as our web application generates a fascinating PDF summary, handpicked from Wikipedia's vast collection. Whether you're seeking intellectual stimulation, expanding your knowledge, or simply indulging your curiosity, our platform is here to guide you.
-      </p>
+      
+        <div class="bottom-div">
+          <p>  
+            Click the 'Teach me something new' button, and watch as our web application generates a fascinating PDF summary, handpicked from Wikipedia's vast collection. ✨📚
+Whether you're seeking intellectual stimulation, expanding your knowledge, or simply indulging your curiosity, our platform is here to guide you. 🧠🌍
+          </p>
+        </div>
+        <div class="bottom-div">
+          <p> Uncover the beauty of unpredictability in learning. 🌟
+            Our web application entices you with a delightful surprise - random PDF summaries drawn from the vast spectrum of Wikipedia's knowledge. 📚🎉
+            Embrace the wonder of chance as you embark on an intellectual adventure. 🚀
+            </p>
+          </div>
+        </div>
     </div>
-    <div class="counter">
-      <h3>PDFs Generated: <span id="counter">{{ counter }}</span></h3>
-    </div>
-    <div class="button-container">
-      <form action="/generate" method="POST">
-        <button type="submit">Teach me something!</button>
-      </form>
-    </div>
-  </main>
+        
+        
+      </div>
+      <div class="counter">
+        <h3>PDFs Generated: <span id="counter">{{ counter }}</span></h3>
+      </div>
+      <div class="button-container">
+        <form action="/generate" method="POST">
+          {{ captcha() }}
+          <button type="submit">Teach me something!</button>
+        </form>
+      </div>
+      <div class="subtitle">
+        <p>Powered by Wikipedia</p>
+        <img src="{{ url_for('static', filename='wiki.png') }}" alt="Wikipedia Logo">
+      </div>
+    </main>
 
   <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
